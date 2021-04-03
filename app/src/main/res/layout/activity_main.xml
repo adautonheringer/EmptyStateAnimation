@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/dark_blue"
     app:layoutDescription="@xml/window_scene"
     tools:context=".MainActivity">
 
@@ -23,7 +23,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/wall_support"
-        app:tint="@color/gray" />
+        app:tint="@color/light_blue2" />
+    
+    <ImageView
+        android:id="@+id/bottom_wall"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        />
 
 
 
@@ -35,7 +42,7 @@
         app:lottie_autoPlay="true"
         app:lottie_imageAssetsFolder="images"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/man_1" />
+        app:lottie_rawRes="@raw/man" />
 
     <ImageView
         android:id="@+id/window"

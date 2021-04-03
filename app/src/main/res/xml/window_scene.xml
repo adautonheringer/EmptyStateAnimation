@@ -40,18 +40,33 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@+id/bottom_wall"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            />
+
 
         <Constraint
             android:id="@+id/main_animation_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="0dp"
-            android:scaleX="1"
-            android:scaleY="1"
+
+            motion:layout_constraintHorizontal_bias="0.25"
+            motion:layout_constraintWidth_percent="0.86"
+            motion:layout_constraintVertical_bias="1"
+            motion:layout_constraintDimensionRatio="1:1"
+
             motion:layout_constraintBottom_toBottomOf="@id/wall"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall" />
 
 
         <Constraint
@@ -70,13 +85,13 @@
             android:id="@+id/window"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:alpha="0.4"
+            android:alpha="1"
             android:elevation="3dp"
             motion:layout_constraintBottom_toBottomOf="@id/wall"
             motion:layout_constraintEnd_toEndOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.7"
+            motion:layout_constraintWidth_percent="0.69"
             motion:layout_constraintDimensionRatio="1:1"
 
 
@@ -123,18 +138,33 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
+        <Constraint
+            android:id="@+id/bottom_wall"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            />
+
 
         <Constraint
             android:id="@+id/main_animation_1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="0dp"
-            android:scaleX="1.1"
-            android:scaleY="1.1"
+
+            motion:layout_constraintHorizontal_bias="0.25"
+            motion:layout_constraintWidth_percent="0.86"
+            motion:layout_constraintVertical_bias="1"
+            motion:layout_constraintDimensionRatio="1:1"
+
+
             motion:layout_constraintBottom_toBottomOf="@id/wall"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall" />
 
         <Constraint
             android:id="@+id/blur_view"
@@ -152,13 +182,13 @@
             android:id="@+id/window"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:alpha="0.4"
+            android:alpha="1"
             android:elevation="3dp"
             motion:layout_constraintBottom_toBottomOf="@id/wall"
             motion:layout_constraintEnd_toStartOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.7"
+            motion:layout_constraintWidth_percent="0.69"
             motion:layout_constraintDimensionRatio="1:1"
 
             />
