@@ -35,14 +35,23 @@
 
 
     <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/main_animation_1"
+        android:id="@+id/man_part_1_animation"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:lottie_autoPlay="true"
         app:lottie_imageAssetsFolder="images"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/man" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/man_part_2_animation"
+        android:visibility="invisible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:lottie_autoPlay="false"
+        app:lottie_imageAssetsFolder="images"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/man_completed_animation" />
 
     <ImageView
         android:id="@+id/window"

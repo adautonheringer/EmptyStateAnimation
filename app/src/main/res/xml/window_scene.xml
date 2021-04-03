@@ -3,6 +3,7 @@
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
+        android:id="@+id/swipe_transition"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@+id/start"
         motion:duration="150"
@@ -15,6 +16,118 @@
 
             />
 
+
+
+    </Transition>
+
+    <Transition
+        android:id="@+id/close_window_transition"
+        motion:constraintSetEnd="@+id/start"
+        motion:constraintSetStart="@+id/end"
+        motion:duration="5000"
+        >
+        <KeyFrameSet>
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/window"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/window"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/window"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/window"
+                motion:transitionEasing="decelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/blur_view"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/blur_view"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/blur_view"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/blur_view"
+                motion:transitionEasing="decelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/handle"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/handle"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/handle"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/handle"
+                motion:transitionEasing="decelerate"
+                />
+
+
+
+
+
+        </KeyFrameSet>
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -53,10 +166,28 @@
 
 
         <Constraint
-            android:id="@+id/main_animation_1"
+            android:id="@+id/man_part_1_animation"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="0dp"
+            motion:visibilityMode="ignore"
+
+            motion:layout_constraintHorizontal_bias="0.25"
+            motion:layout_constraintWidth_percent="0.86"
+            motion:layout_constraintVertical_bias="1"
+            motion:layout_constraintDimensionRatio="1:1"
+
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall" />
+
+        <Constraint
+            android:id="@+id/man_part_2_animation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:visibilityMode="ignore"
 
             motion:layout_constraintHorizontal_bias="0.25"
             motion:layout_constraintWidth_percent="0.86"
@@ -85,13 +216,13 @@
             android:id="@+id/window"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:alpha="1"
+            android:alpha="0.8"
             android:elevation="3dp"
             motion:layout_constraintBottom_toBottomOf="@id/wall"
             motion:layout_constraintEnd_toEndOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.69"
+            motion:layout_constraintWidth_percent="0.70"
             motion:layout_constraintDimensionRatio="1:1"
 
 
@@ -150,16 +281,34 @@
 
 
         <Constraint
-            android:id="@+id/main_animation_1"
+            android:id="@+id/man_part_1_animation"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="0dp"
+            motion:visibilityMode="ignore"
 
             motion:layout_constraintHorizontal_bias="0.25"
             motion:layout_constraintWidth_percent="0.86"
             motion:layout_constraintVertical_bias="1"
             motion:layout_constraintDimensionRatio="1:1"
 
+
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall" />
+
+        <Constraint
+            android:id="@+id/man_part_2_animation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="0dp"
+            motion:visibilityMode="ignore"
+
+            motion:layout_constraintHorizontal_bias="0.25"
+            motion:layout_constraintWidth_percent="0.86"
+            motion:layout_constraintVertical_bias="1"
+            motion:layout_constraintDimensionRatio="1:1"
 
             motion:layout_constraintBottom_toBottomOf="@id/wall"
             motion:layout_constraintEnd_toEndOf="@id/wall"
@@ -182,13 +331,13 @@
             android:id="@+id/window"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:alpha="1"
+            android:alpha="0.8"
             android:elevation="3dp"
             motion:layout_constraintBottom_toBottomOf="@id/wall"
             motion:layout_constraintEnd_toStartOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.69"
+            motion:layout_constraintWidth_percent="0.70"
             motion:layout_constraintDimensionRatio="1:1"
 
             />
