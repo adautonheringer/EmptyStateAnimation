@@ -11,13 +11,11 @@
 
         <OnSwipe
             motion:dragDirection="dragLeft"
+            motion:touchAnchorId="@+id/window"
             motion:touchRegionId="@+id/window"
             motion:onTouchUp="autoCompleteToEnd"
 
             />
-
-
-
     </Transition>
 
     <Transition
@@ -124,6 +122,104 @@
                 />
 
 
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/text_first"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/text_first"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/text_first"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/text_first"
+                motion:transitionEasing="decelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/text_second"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/text_second"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/text_second"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/text_second"
+                motion:transitionEasing="decelerate"
+                />
+
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.0"
+                motion:framePosition="62"
+                motion:motionTarget="@id/switch_selector"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="75"
+                motion:motionTarget="@id/switch_selector"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.96"
+                motion:framePosition="79"
+                motion:motionTarget="@id/switch_selector"
+                motion:transitionEasing="accelerate"
+                />
+
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="1"
+                motion:framePosition="85"
+                motion:motionTarget="@id/switch_selector"
+                motion:transitionEasing="decelerate"
+                />
+
+
 
 
 
@@ -157,7 +253,7 @@
             android:id="@+id/bottom_wall"
             android:layout_width="0dp"
             android:layout_height="0dp"
-
+            android:elevation="4dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/wall"
@@ -233,6 +329,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:elevation="5dp"
+            android:alpha="0.87"
+
             motion:layout_constraintBottom_toBottomOf="@id/window"
             motion:layout_constraintEnd_toEndOf="@id/window"
             motion:layout_constraintHeight_percent="0.05"
@@ -241,6 +339,57 @@
             motion:layout_constraintTop_toTopOf="@id/window"
             motion:layout_constraintWidth_percent="0.05"
 
+            />
+
+        <Constraint
+            android:id="@+id/text_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/bottom_wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
+
+        <Constraint
+            android:id="@+id/text_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+
+            motion:layout_constraintStart_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/bottom_wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
+
+        <Constraint
+            android:id="@+id/resource_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/text_first"
+            motion:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+        <Constraint
+            android:id="@+id/switch_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            motion:layout_constraintStart_toStartOf="@id/resource_switch"
+            motion:layout_constraintTop_toTopOf="@id/resource_switch"
+            motion:layout_constraintBottom_toBottomOf="@id/resource_switch"
             />
 
     </ConstraintSet>
@@ -273,6 +422,7 @@
             android:id="@+id/bottom_wall"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:elevation="4dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/wall"
@@ -338,6 +488,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintWidth_percent="0.70"
+            motion:layout_constraintHorizontal_bias="0.55"
             motion:layout_constraintDimensionRatio="1:1"
 
             />
@@ -346,7 +497,8 @@
             android:id="@+id/handle"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
+            android:alpha="0.87"
             motion:layout_constraintBottom_toBottomOf="@id/window"
             motion:layout_constraintEnd_toEndOf="@id/window"
             motion:layout_constraintHeight_percent="0.05"
@@ -355,6 +507,59 @@
             motion:layout_constraintTop_toTopOf="@id/window"
             motion:layout_constraintWidth_percent="0.05"
 
+            />
+
+
+        <Constraint
+            android:id="@+id/text_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+
+            motion:layout_constraintEnd_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/bottom_wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
+
+        <Constraint
+            android:id="@+id/text_second"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/bottom_wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
+
+        <Constraint
+            android:id="@+id/resource_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/text_first"
+            motion:layout_constraintBottom_toBottomOf="parent"
+
+            />
+
+
+        <Constraint
+            android:id="@+id/switch_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="6dp"
+            motion:layout_constraintEnd_toEndOf="@id/resource_switch"
+            motion:layout_constraintTop_toTopOf="@id/resource_switch"
+            motion:layout_constraintBottom_toBottomOf="@id/resource_switch"
             />
 
     </ConstraintSet>

@@ -15,6 +15,7 @@
         android:id="@+id/wall"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:tint="@color/light_blue"
         android:src="@drawable/wall"
         />
 
@@ -29,10 +30,9 @@
         android:id="@+id/bottom_wall"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@color/white"
+        android:layout_marginTop="-1dp"
+        android:background="@color/light_blue"
         />
-
-
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/man_part_1_animation"
@@ -75,9 +75,42 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/handle"
-        app:tint="@color/dark_gray"
+        app:tint="@color/dark_blue"
 
         />
 
+
+    <TextView
+        android:id="@+id/text_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poxa... \nainda não temos restaurantes em sua região"
+        android:textAppearance="?textAppearanceSubtitle2"
+        />
+
+    <TextView
+        android:id="@+id/text_second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mas o time está super empolgado para resolver logo. Aguarde!"
+        android:textAppearance="?textAppearanceSubtitle2"
+        />
+
+
+    <ImageView
+        android:id="@+id/resource_switch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/resource_switch"
+
+        />
+
+    <ImageView
+        android:id="@+id/switch_selector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/switch_selector"
+
+        />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
