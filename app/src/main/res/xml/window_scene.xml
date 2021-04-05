@@ -231,7 +231,7 @@
             android:id="@+id/wall"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:elevation="4dp"
+            android:elevation="6dp"
             motion:layout_constraintDimensionRatio="1:1"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -245,9 +245,44 @@
             android:layout_height="0dp"
             android:elevation="2dp"
             motion:layout_constraintDimensionRatio="1:1"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.92"
+
+            />
+
+        <Constraint
+            android:id="@+id/window_background_stroke"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+
+            android:alpha="0.7"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
+
+        <Constraint
+            android:id="@+id/window_shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
 
         <Constraint
             android:id="@+id/bottom_wall"
@@ -318,7 +353,7 @@
             motion:layout_constraintEnd_toEndOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.70"
+            motion:layout_constraintWidth_percent="0.67"
             motion:layout_constraintDimensionRatio="1:1"
 
 
@@ -372,21 +407,22 @@
 
         <Constraint
             android:id="@+id/resource_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
             android:elevation="4dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/text_first"
             motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHeight_percent="0.1"
 
             />
 
         <Constraint
             android:id="@+id/switch_selector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="6dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:elevation="16dp"
             motion:layout_constraintStart_toStartOf="@id/resource_switch"
             motion:layout_constraintTop_toTopOf="@id/resource_switch"
             motion:layout_constraintBottom_toBottomOf="@id/resource_switch"
@@ -400,7 +436,7 @@
             android:id="@+id/wall"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:elevation="4dp"
+            android:elevation="6dp"
             motion:layout_constraintDimensionRatio="1:1"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -414,9 +450,42 @@
             android:layout_height="0dp"
             android:elevation="2dp"
             motion:layout_constraintDimensionRatio="1:1"
-            motion:layout_constraintEnd_toEndOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.92"
+
+            />
+
+        <Constraint
+            android:id="@+id/window_background_stroke"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="2dp"
+            android:alpha="0.7"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.7"
+
+            />
+
+        <Constraint
+            android:id="@+id/window_shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:elevation="8dp"
+            motion:layout_constraintDimensionRatio="1:1"
+            motion:layout_constraintEnd_toEndOf="@id/wall"
+            motion:layout_constraintStart_toStartOf="@id/wall"
+            motion:layout_constraintTop_toTopOf="@id/wall"
+            motion:layout_constraintBottom_toBottomOf="@id/wall"
+            motion:layout_constraintWidth_percent="0.70"
+
+            />
 
         <Constraint
             android:id="@+id/bottom_wall"
@@ -487,7 +556,7 @@
             motion:layout_constraintEnd_toStartOf="@id/wall"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent"
-            motion:layout_constraintWidth_percent="0.70"
+            motion:layout_constraintWidth_percent="0.67"
             motion:layout_constraintHorizontal_bias="0.55"
             motion:layout_constraintDimensionRatio="1:1"
 
@@ -541,22 +610,23 @@
 
         <Constraint
             android:id="@+id/resource_switch"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
             android:elevation="4dp"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/text_first"
             motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHeight_percent="0.1"
 
             />
 
 
         <Constraint
             android:id="@+id/switch_selector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:elevation="6dp"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:elevation="16dp"
             motion:layout_constraintEnd_toEndOf="@id/resource_switch"
             motion:layout_constraintTop_toTopOf="@id/resource_switch"
             motion:layout_constraintBottom_toBottomOf="@id/resource_switch"

@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dark_blue"
+    android:background="@drawable/gradient_test"
     app:layoutDescription="@xml/window_scene"
     tools:context=".MainActivity">
 
@@ -15,7 +15,7 @@
         android:id="@+id/wall"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:tint="@color/light_blue"
+        app:tint="@color/light_blue2"
         android:src="@drawable/wall"
         />
 
@@ -23,15 +23,30 @@
         android:id="@+id/wall_support"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/wall_support"
+        android:src="@drawable/wall"
         app:tint="@color/light_blue2" />
+
+    <ImageView
+        android:id="@+id/window_background_stroke"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/window_background_stroke"
+        />
+
+    <ImageView
+        android:id="@+id/window_shadow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/window_shadow_1"
+        />
+
     
     <ImageView
         android:id="@+id/bottom_wall"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="-1dp"
-        android:background="@color/light_blue"
+        android:background="@color/light_blue2"
         />
 
     <com.airbnb.lottie.LottieAnimationView
@@ -85,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Poxa... \nainda não temos restaurantes em sua região"
-        android:textAppearance="?textAppearanceSubtitle2"
+        android:textAppearance="?textAppearanceSubtitle1"
         />
 
     <TextView
@@ -93,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mas o time está super empolgado para resolver logo. Aguarde!"
-        android:textAppearance="?textAppearanceSubtitle2"
+        android:textAppearance="?textAppearanceSubtitle1"
         />
 
 
@@ -109,7 +124,7 @@
         android:id="@+id/switch_selector"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/switch_selector"
+        android:src="@drawable/circle_shape"
 
         />
 
