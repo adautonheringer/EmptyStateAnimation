@@ -99,16 +99,16 @@
         android:id="@+id/text_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Poxa... \nainda não temos restaurantes em sua região"
-        android:textAppearance="?textAppearanceSubtitle1"
+        android:text="Ainda não temos restaurantes em sua região..."
+        android:textAppearance="?textAppearanceHeadline6"
         />
 
     <TextView
         android:id="@+id/text_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mas o time está super empolgado para resolver logo. Aguarde!"
-        android:textAppearance="?textAppearanceSubtitle1"
+        android:text="Mas já estamos resolvendo. \nNos aguarde!"
+        android:textAppearance="?textAppearanceHeadline6"
         />
 
 
